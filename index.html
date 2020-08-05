@@ -3,65 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portofolio</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Red Rose', cursive;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #000;
-        }
-        .wavy {
-            position: relative;
-            -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-        }
-        .wavy span {
-            position: relative;
-            display: inline-block;
-            color: #fff;
-            font-size: 2em;
-            text-transform: uppercase;
-            animation: animate 2s ease-in-out infinite;
-            animation-delay: calc(.1s * var(--i))
-        }
-        @keyframes animate {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            20% {
-                transform: translateY(-20px);
-            }
-            40% {
-                transform: translateY(0px);
-            }
-        }
-    </style>
+    <title>Steven Cuaca</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="wavy">
-        <span style="--i:1;">C</span>
-        <span style="--i:2;">o</span>
-        <span style="--i:3;">m</span>
-        <span style="--i:4;">i</span>
-        <span style="--i:5;">n</span>
-        <span style="--i:6;">g</span>
-        <span style="--i:7;"></span>
-        <span style="--i:8;">S</span>
-        <span style="--i:9;">o</span>
-        <span style="--i:10;">o</span>
-        <span style="--i:11;">n</span>
-        <span style="--i:12;">.</span>
-        <span style="--i:13;">.</span>
-        <span style="--i:14;">.</span>
+    <div class="container">
+        <header>
+            <h2 class="logo">Steven Cuaca</h2>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#experienced">Experienced</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            </label>
+        </header>
+        
+        <section id="about">
+            <img src="img/avatar.jpg" alt="Avatar">
+            <h1>About me</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas repellat non expedita, ab est aspernatur asperiores velit! Itaque rem possimus sunt, illum nihil aperiam fuga! Sequi eligendi omnis adipisci pariatur aspernatur fuga alias corporis, asperiores esse quaerat, obcaecati sunt blanditiis odit aut. Omnis sapiente minus nulla fugiat. Ad, provident?</p>
+        </section>
+        <section id="portofolio">
+            <h1>Portofolio</h1>
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+        </section>
+        <section id="experienced">
+            <h1>Experienced</h1>
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+        </section>
+        
+        <footer sty>Footer</footer>
     </div>
+    
 </body>
 </html>
+
