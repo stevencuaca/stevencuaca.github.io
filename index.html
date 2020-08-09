@@ -26,11 +26,12 @@
         </header>
 
         <section id="hi">
-            <img src="img/profile.jpeg" alt="Me" data-aos="flip-right" data-aos-duration="1000">
+            <br>
+            <img class="circle" src="img/profile.jpeg" alt="Me" data-aos="flip-right" data-aos-duration="1000">
             <div class="box">
                 <h2 data-aos="flip-right" data-aos-duration="1000">About me</h2>
             </div>
-            <p class="lead" data-aos="slide-down" data-aos-duration="2000">Currently working as a coding teacher for Grade 1-12 at KodeKiddo. Have worked on several website projects during in college. Passionate in web programming.
+            <p class="lead" data-aos="slide-down" data-aos-duration="2000">"My name is Steven Cuaca, i'm from Indonesia <img src="img/indoensia.png" alt="Indonesia's flag"> . Currently working as a coding teacher for Grade 1-12 at KodeKiddo. Have worked on several website projects during in college. Passionate in web programming."</p>
             <p data-aos="slide-up" data-aos-duration="2000"><i>Programming skills: HTML, CSS, JavaScript, PHP, MySQL, Python, C++/C#, Laravel, Yii2</i></p>
         </section>
         
@@ -77,7 +78,50 @@
         
         <section id="portofolio">
             <h1 data-aos="fade-right">Portofolio</h1>
-            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+
+            <div class="containers" data-aos="zoom-in">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="img/attendancesys.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="img/ohana.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="img/room-booking-simulation.jpg" style="width:100%">
+                </div>
+                    
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="img/face-attendance.png" style="width:100%">
+                </div>
+                    
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="caption-containers">
+                    <p id="caption"></p>
+                </div>
+
+                <div class="row">
+                    <div class="columns">
+                    <img class="demo cursor" src="img/attendancesys.png" style="width:100%" onclick="currentSlide(1)" alt="Attendancesys">
+                    </div>
+                    <div class="columns">
+                    <img class="demo cursor" src="img/ohana.png" style="width:100%" onclick="currentSlide(2)" alt="Ohana Bridal Booking System">
+                    </div>
+                    <div class="columns">
+                    <img class="demo cursor" src="img/room-booking-simulation.jpg" style="width:100%" onclick="currentSlide(3)" alt="Room Booking Simulation Software">
+                    </div>
+                    <div class="columns">
+                    <img class="demo cursor" src="img/face-attendance.png" style="width:100%" onclick="currentSlide(4)" alt="Employee Face Attendance with Anti-spoof">
+                    </div>
+                </div>
+            </div>
         </section>
         
         <section id="contact">
@@ -134,6 +178,34 @@
             StartTextAnimation(0);
         });
 
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
     </script>
 </body>
 </html>
