@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steven Cuaca</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div class="container">
@@ -14,8 +15,8 @@
             <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#portofolio">Portofolio</a></li>
-                <li><a href="#experienced">Experienced</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             </nav>
@@ -23,28 +24,73 @@
             <span></span>
             </label>
         </header>
+        <section class="test" id="about">
+            <img src="img/profile.jpeg" alt="Me" data-aos="fade-right" data-aos-duration="1000">
+            <h1 data-aos="flip-right" data-aos-duration="1000">About me</h1>
+            <p class="lead" data-aos="fade-up" data-aos-duration="2000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas repellat nonexpedita, ab est aspernatur asperiores velit! Itaque rem possimus sunt, illum nihil aperiam fuga!Sequi eligendi omnis adipisci pariatur aspernatur fuga alias corporis, asperiores esse quaerat,obcaecati sunt blanditiis odit aut. Omnis sapiente minus nulla fugiat. Ad, provident?</p>
+        </section>
         
-        <section id="about">
-            <img src="img/avatar.jpg" alt="Avatar">
-            <h1>About me</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas repellat non expedita, ab est aspernatur asperiores velit! Itaque rem possimus sunt, illum nihil aperiam fuga! Sequi eligendi omnis adipisci pariatur aspernatur fuga alias corporis, asperiores esse quaerat, obcaecati sunt blanditiis odit aut. Omnis sapiente minus nulla fugiat. Ad, provident?</p>
+        <section id="experience">
+            <h1 data-aos="fade-down">Experience</h1>
+            
+            <div class="row">
+                <div class="column" data-aos="slide-left">
+                    <div class="card">
+                    <h3>Careers</h3>
+                    <ul>
+                        <li>
+                            <strong>Teacher • KodeKiddo [Gading Serpong]</strong>
+                            <p>2018 - Present</p>
+                        </li>
+                        <li>
+                            <strong>Junior App Dev • Netofidea [Jakarta]</strong>
+                            <p>2019</p>
+                        </li>
+                        <li>
+                            <strong>Instructor • Kumon [Lippo Karawaci]</strong>
+                            <p>2016</p>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+
+                <div class="column" data-aos="slide-right">
+                    <div class="card">
+                    <h3>Educations</h3>
+                    <ul>
+                        <li>
+                            <strong>Majoring in Computer Science • Matana University</strong>
+                            <p>2016 - 2020</p>
+                        </li>
+                        <li>
+                            <strong>Majoring in Science • Atisa Dipamkara High School</strong>
+                            <p>2013 - 2016</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
+        
         <section id="portofolio">
-            <h1>Portofolio</h1>
+            <h1 data-aos="fade-right">Portofolio</h1>
             <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
         </section>
-        <section id="experienced">
-            <h1>Experienced</h1>
-            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
-        </section>
+        
         <section id="contact">
-            <h1>Contact</h1>
+            <h1 data-aos="fade-right">Contact</h1>
             <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
         </section>
         
         <footer sty>Footer</footer>
     </div>
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+         AOS.init({
+        offset: 200, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1000 // values from 0 to 3000, with step 50ms
+      });
+    </script>
 </body>
 </html>
 
