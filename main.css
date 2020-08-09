@@ -282,11 +282,11 @@ p {
   }
   
   /* Responsive columns */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 500px) {
     .column {
         width: auto;
-      display: block;
-      margin: 20px;
+        display: block;
+        margin: 20px;
     }
   }
   
@@ -317,3 +317,10 @@ p {
       border-color: transparent;
     }
   }
+
+.box {
+    height: 80px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}

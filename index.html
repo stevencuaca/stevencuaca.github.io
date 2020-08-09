@@ -10,12 +10,11 @@
 <body>
     <div class="container">
         <header>
-            <h2 class="logo">Steven Cuaca</h2>
+            <h3 class="logo">Steven Cuaca</h3>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <nav>
             <ul>
                 <li><a href="#hi">Hi!</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#portofolio">Portofolio</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -27,14 +26,12 @@
         </header>
 
         <section id="hi">
-            <h1>Hi!</h1>
-        </section>
-
-        <section class="test" id="about">
-            <img src="img/profile.jpeg" alt="Me" data-aos="fade-right" data-aos-duration="1000">
-            <h1 data-aos="flip-right" data-aos-duration="1000">About me</h1>
-            <p class="lead" data-aos="fade-up" data-aos-duration="2000">Currently working as a coding teacher for Grade 1-12 at KodeKiddo. Have worked on several website projects during in college. Passionate in web programming.
-            <p data-aos="fade-up" data-aos-duration="2000"><i>Programming skills: HTML, CSS, JavaScript, PHP, MySQL, Python, C++/C#, Laravel, Yii2</i></p>
+            <img src="img/profile.jpeg" alt="Me" data-aos="flip-right" data-aos-duration="1000">
+            <div class="box">
+                <h2 data-aos="flip-right" data-aos-duration="1000">About me</h2>
+            </div>
+            <p class="lead" data-aos="slide-down" data-aos-duration="2000">Currently working as a coding teacher for Grade 1-12 at KodeKiddo. Have worked on several website projects during in college. Passionate in web programming.
+            <p data-aos="slide-up" data-aos-duration="2000"><i>Programming skills: HTML, CSS, JavaScript, PHP, MySQL, Python, C++/C#, Laravel, Yii2</i></p>
         </section>
         
         <section id="experience">
@@ -98,46 +95,43 @@
       });
 
       document.addEventListener('DOMContentLoaded',function(event){
-        // array with texts to type in typewriter
-        var dataText = [ "¡Hola!", "こんにちは！", "Hi!"];
-        
-        // type one text in the typwriter
-        // keeps calling itself until the text is finished
-        function typeWriter(text, i, fnCallback) {
-            // chekc if text isn't finished yet
-            if (i < (text.length)) {
-            // add next character to h1
-            document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+            // array with texts to type in typewriter
+            var dataText = [ "¡Hola!", "こんにちは！", "Hallo!", "你好!", "Hai!", "안녕하세요!", "Hi!"];
+            
+            // type one text in the typwriter
+            // keeps calling itself until the text is finished
+            function typeWriter(text, i, fnCallback) {
+                // chekc if text isn't finished yet
+                if (i < (text.length)) {
+                // add next character to h1
+                document.querySelector("h2").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
 
-            // wait for a while and call this function again for next character
-            setTimeout(function() {
-                typeWriter(text, i + 1, fnCallback)
-            }, 100);
-            }
-            // text finished, call callback if there is a callback function
-            else if (typeof fnCallback == 'function') {
-            // call callback after timeout
-            setTimeout(fnCallback, 700);
-            }
-        }
-        // start a typewriter animation for a text in the dataText array
-        function StartTextAnimation(i) {
-            if (typeof dataText[i] == 'undefined'){
+                // wait for a while and call this function again for next character
                 setTimeout(function() {
-                StartTextAnimation(0);
-                }, 20000);
+                    typeWriter(text, i + 1, fnCallback)
+                }, 200);
+                }
+                // text finished, call callback if there is a callback function
+                else if (typeof fnCallback == 'function') {
+                    // call callback after timeout
+                    setTimeout(fnCallback, 3000);
+                }
             }
-            // check if dataText[i] exists
-            if (i < dataText[i].length) {
-            // text exists! start typewriter animation
+            // start a typewriter animation for a text in the dataText array
+            function StartTextAnimation(i) {
             typeWriter(dataText[i], 0, function(){
-            // after callback (and whole text has been animated), start next text
-            StartTextAnimation(i + 1);
+                // after callback (and whole text has been animated), start next text
+                if (i === dataText.length - 1) {
+                setTimeout(function() {
+                    StartTextAnimation(0);
+                }, 2000);
+                } else {
+                StartTextAnimation(i + 1);
+                }
             });
             }
-        }
-        // start the text animation
-        StartTextAnimation(0);
+            // start the text animation
+            StartTextAnimation(0);
         });
 
     </script>
