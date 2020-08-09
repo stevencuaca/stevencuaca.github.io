@@ -217,6 +217,9 @@ section {
     scroll-snap-align: center;
 }
 
+section p {
+    width: 80%;
+}
 
 .wavy {
     position: relative;
@@ -325,7 +328,7 @@ section {
   /* Position the image container (needed to position the left and right arrows) */
   .containers {
     position: relative;
-    width: 50%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
