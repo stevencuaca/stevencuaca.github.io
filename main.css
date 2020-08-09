@@ -226,26 +226,6 @@ section {
     scroll-snap-align: center;
 }
 
-/* Section Images */
-section#home {
-    background-color: #fff;
-    //background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;;
-}
-
-section#about {
-    background-color: #fff;
-    //background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;;
-}
-
-section#service {
-    background-color: #fff;
-    //background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;;
-}
-
-section#contact {
-    background-color: #fff;
-    //background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
-}
 
 .wavy {
     position: relative;
@@ -325,4 +305,15 @@ p {
 
   .card ul{
     list-style-type: square;
+  }
+  
+  span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
   }
