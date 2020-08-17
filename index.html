@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="hi">
   <head>
     <title>Steven Cuaca</title>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" href="img/diamond.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
       body,h1,h2,h3,h4,h5 {font-family: 'Raleway', sans-serif}
@@ -64,9 +65,9 @@
             position: absolute;
             top: 0;
             left: 50%;
-            width: 24px;
-            height: 24px;
-            margin-left: -12px;
+            width: 12px;
+            height: 12px;
+            margin-left: -6px;
             border-left: 1px solid #000;
             border-bottom: 1px solid #000;
             -webkit-transform: rotate(-45deg);
@@ -112,6 +113,50 @@
             opacity: 0;
         }
         }
+        
+        /* Social media icons */
+        .fa {
+          padding: 10px;
+          font-size: 30px;
+          width: 50px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+          border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+        
+        .fa-linkedin {
+          background: #007bb5;
+          color: white;
+        }
+
+        .fa-github {
+          background: #333;
+          color: white;
+        }
+
+        .fa-youtube {
+          background: #bb0000;
+          color: white;
+        }
+
+        .fa-instagram {
+          background: #f09433;
+          background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+          background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+          background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+          color: white;
+        }
     </style>
   </head>
 
@@ -153,7 +198,7 @@
     </div>
   </div>
 
-  <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="hi">
+  <div class="w3-container w3-white w3-center w3-text-black w3-padding-32">
     <div class="box">
       <h2 style="text-align:center; padding-top: 250px;">Hi!</h2>
       <section id="section07" class="demo" data-aos="slide-down">
@@ -166,32 +211,46 @@
 
   <!-- About section -->
   <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="about">
-    <h4 style="padding-top: 50px;" data-aos="slide-up" data-aos-duration="500"><b>About Me</b></h4>
+    <h4 style="padding-top: 30px;" data-aos="slide-down" data-aos-duration="500"><b>About Me</b></h4>
+    <hr class="w3-opacity">
     <img class="circle" src="img/profile.jpeg" alt="Me" class="w3-image w3-padding-32" data-aos="flip-right" data-aos-duration="1000">
-    <div class="w3-content w3-justify" style="max-width:600px">
-      <p>"My name is Steven Cuaca, i'm from Indonesia <img src="img/indoensia.png" alt="Indonesia's flag"> . Currently working as a coding teacher for Grade 1-12. Have worked on several website projects during in college. Passionate in web programming."
+    <hr class="w3-opacity">
+    <div class="w3-content w3" style="max-width:600px">
+      <p data-aos="fade-in">"My name is Steven Cuaca, i'm from Indonesia <img src="img/indoensia.png" alt="Indonesia's flag"> . Currently working as a coding teacher for Grade 1-12. Have worked on several website projects during in college. Passionate in web programming."
       </p>
-      <p><i>Programming skills: HTML, CSS, JavaScript, PHP, MySQL, Python, C++/C#, Laravel, Yii2</i></p>
-      <p>mail: <a href="mailto:cuacasteven@gmail.com">cuacasteven@gmail.com</a></p>
-      <p>Linkedin: <a href="https://www.linkedin.com/in/stevencuaca/">stevencuaca</a></p>
-      <hr class="w3-opacity">
-      <h4 class="w3-padding-16">Technical Skills</h4>
-      <p class="w3-wide">Photography</p>
-      <div class="w3-white">
-        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">95%</div>
-      </div>
-      <p class="w3-wide">Web Design</p>
-      <div class="w3-white">
-        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide">Photoshop</p>
-      <div class="w3-white">
-        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
-      </div>
-      <p><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></p>
+
       <hr class="w3-opacity">
 
-      <h4 class="w3-padding-16">How much I charge</h4>
+      <p>Find me on:</p>
+
+      <a data-aos="slide-up" target="_blank" rel="noopener noreferrer" href="https://github.com/stevencuaca" class="fa fa-github"></a>
+      <a data-aos="slide-up" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/stevencuaca/" class="fa fa-linkedin"></a>
+      <a data-aos="slide-up" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCOm9bywr9TXPJbLGuWfGgIA" class="fa fa-youtube"></a>
+      <a data-aos="slide-up" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/stevencuaca/" class="fa fa-instagram"></a>
+      <a data-aos="slide-up" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/stevencuaca/" class="fa fa-facebook"></a>
+      
+      <br>
+      
+      <!-- <h4 class="w3-padding-16">Technical Skills</h4>
+      <p>C++/C#</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-blue" style="width:80%" data-aos="slide-right" data-aos-duration="2000">80%</div>
+      </div>
+      <p>HTML, CSS, & Javascript</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-blue" style="width:85%" data-aos="slide-right" data-aos-duration="2000">85%</div>
+      </div>
+      <p>PHP & MySQL</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-blue" style="width:80%" data-aos="slide-right" data-aos-duration="2000">80%</div>
+      </div>
+      <p>Python</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-blue" style="width:85%" data-aos="slide-right" data-aos-duration="2000">85%</div>
+      </div> -->
+      <!--  <p><button class="w3-button w3-black w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></p> -->
+      
+      <!-- <h4 class="w3-padding-16">How much I charge</h4>
       <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half w3-margin-bottom">
           <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
@@ -208,9 +267,9 @@
               <button class="w3-button w3-white w3-padding-large">Sign Up</button>
             </li>
           </ul>
-        </div>
+        </div> -->
         
-        <div class="w3-half">
+        <!-- <div class="w3-half">
           <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
             <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
             <li class="w3-padding-16">Web Design</li>
@@ -225,17 +284,35 @@
               <button class="w3-button w3-white w3-padding-large">Sign Up</button>
             </li>
           </ul>
-        </div>
-      </div>
+        </div> 
+      </div>-->
+    </div>
+  </div>
+
+  <!-- Portofolio section -->
+  <!-- Contact section -->
+  <div class="w3-container w3-white w3-padding-32 w3-padding-large" id="portofolio">
+    <div class="w3-content" style="max-width:600px">
+      <h4 data-aos="slide-up" style="padding-top: 50px;" class="w3-center"><b>Portofolio</b></h4>
+      <hr class="w3-opacity">
+        <!-- Images (Portfolio) -->
+        <img data-aos="fade-in" src="img/attendancesys.png" alt="Attendancesys" class="w3-image" width="1000" height="500">
+        <p>PT KLPI - Employee management system</p>
+        <img data-aos="fade-in" src="img/ohana.png" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
+        <p>Ohana Bridal - Dress booking system</p>
+        <img data-aos="fade-in" src="img/room-booking-simulation.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
+        <p>Hibah Dikti - Room reservation simulation software</p>
+        <img data-aos="fade-in" src="img/face-attendance.png" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
+        <p>PT KLPI - Employee face recognition with antispoof attendance system</p>
     </div>
   </div>
 
   <!-- Contact section -->
-  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+  <div class="w3-container w3-white w3-padding-32 w3-padding-large" id="contact">
     <div class="w3-content" style="max-width:600px">
-      <h4 class="w3-center"><b>Contact Me</b></h4>
-      <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting new people!</p>
-      <form action="/action_page.php" target="_blank">
+      <h4 data-aos="slide-right" style="padding-top: 50px;" class="w3-center"><b>Contact Me</b></h4>
+      <hr class="w3-opacity">
+      <form action="action_page.php"  method="post" target="_blank">
         <div class="w3-section">
           <label>Name</label>
           <input class="w3-input w3-border" type="text" name="Name" required>
@@ -248,13 +325,13 @@
           <label>Message</label>
           <input class="w3-input w3-border" type="text" name="Message" required>
         </div>
-        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+        <button type="submit" class="w3-button w3-block w3-blue w3-margin-bottom w3-hover-black">Send Message</button>
       </form>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-grey">  
+  <!-- <footer class="w3-container w3-padding-32 w3-grey">  
     <div class="w3-row-padding">
       <div class="w3-third">
         <h3>INFO</h3>
@@ -288,9 +365,9 @@
         </p>
       </div>
     </div>
-  </footer>
+  </footer> -->
   
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+  <div class="w3-black w3-center w3-padding-24">Steven Cuaca &copy; 2020</div>
 
 <!-- End page content -->
 </div>
