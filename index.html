@@ -157,6 +157,45 @@
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
           color: white;
         }
+
+        .container {
+          position: relative;
+          width: 100%;
+        }
+        .image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .5s ease;
+          background-color: #008CBA;
+        }
+
+        .container:hover .overlay {
+          opacity: 1;
+        }
+
+        .text {
+          color: white;
+          font-size: 15px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
     </style>
   </head>
 
@@ -211,12 +250,12 @@
 
   <!-- About section -->
   <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="about">
-    <h4 style="padding-top: 30px;" data-aos="slide-down" data-aos-duration="500"><b>About Me</b></h4>
+    <h4 style="padding-top: 35px;" data-aos="slide-down" data-aos-duration="500"><b>About Me</b></h4>
     <hr class="w3-opacity">
     <img class="circle" src="img/profile.jpeg" alt="Me" class="w3-image w3-padding-32" data-aos="flip-right" data-aos-duration="1000">
     <hr class="w3-opacity">
     <div class="w3-content w3" style="max-width:600px">
-      <p data-aos="fade-in">"Hi! I'm Steven Cuaca. I'm from Indonesia <img src="img/indoensia.png" alt="Indonesia's flag"> . Currently working as a coding teacher for Grade 1-12. Has completed bachelor degree in computer science. Have worked on several website projects during in college. Passionate in web programming."
+      <p data-aos="fade-in">"Hi! I'm Steven Cuaca. I'm from Indonesia <img src="img/indoensia.png" alt="Indonesia's flag"> . Currently working as a part time coding teacher. Has completed bachelor degree in computer science (Graduated in 2020). Have worked on several website projects during college. Passionate in web programming."
       </p>
 
       <hr class="w3-opacity">
@@ -296,14 +335,38 @@
       <h4 data-aos="slide-up" style="padding-top: 50px;" class="w3-center"><b>Portofolio</b></h4>
       <hr class="w3-opacity">
         <!-- Images (Portfolio) -->
-        <img data-aos="fade-in" src="img/attendancesys.png" alt="Attendancesys" class="w3-image" width="1000" height="500">
-        <p>PT KLPI - Employee management system</p>
-        <img data-aos="fade-in" src="img/ohana.png" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
-        <p>Ohana Bridal - Dress booking system</p>
-        <img data-aos="fade-in" src="img/room-booking-simulation.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
-        <p>Hibah Dikti - Room reservation simulation software</p>
-        <img data-aos="fade-in" src="img/face-attendance.png" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
-        <p>PT KLPI - Employee face recognition with antispoof attendance system</p>
+        <div class="container">
+          <img data-aos="fade-in" src="img/attendancesys.png" alt="Attendancesys" class="w3-image image" width="1000" height="500">
+          <div class="overlay">
+            <div class="text">PT KLPI - Employee management system</div>
+          </div>
+        </div>
+          <p>Web Content Management System</p>
+
+        <div class="container">
+          <img data-aos="fade-in" src="img/ohana.png" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
+          <div class="overlay">
+            <div class="text">Ohana Bridal - Dress booking system</div>
+          </div>
+        </div>
+        <p>Web Content Management System</p>
+
+        <div class="container">
+          <img data-aos="fade-in" src="img/room-booking-simulation.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
+          <div class="overlay">
+            <div class="text">Hibah Dikti - Room reservation simulation software</div>
+          </div>
+        </div>
+        <p>Web Content Management System</p>
+
+        <div class="container">
+          <img data-aos="fade-in" src="img/face-attendance.png" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
+          <div class="overlay">
+            <div class="text">PT KLPI - Employee face recognition with antispoof attendance system</div>
+          </div>
+        </div>
+        <p>Desktop Application</p>
+        
     </div>
   </div>
 
@@ -380,7 +443,7 @@ AOS.init({
 // Typing text animation
 document.addEventListener('DOMContentLoaded',function(event){
             // array with texts to type in typewriter
-            var dataText = [ "¡Hola!", "こんにちは！", "Hallo!", "你好!", "Hai!", "안녕하세요!", "Hi!"];
+            var dataText = [ "¡Hola!", "こんにちは！", "Hallo!", "你好!", "Hai!", "안녕하세요!", "Здравствуй!", "Ciao!", "salut!", "مرحبا!", "Hi!"];
             
             // type one text in the typwriter
             // keeps calling itself until the text is finished
